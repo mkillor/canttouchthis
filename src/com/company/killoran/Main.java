@@ -8,9 +8,10 @@ public class Main {
         System.out.println("Hammertime!");
         System.out.println("does this work?");
 
-        Scanner input = new Scanner(System.in);
-        System.out.println("Type your name here:");
-        String name = input.nextLine();
-        System.out.println("Hello" + name);
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.println("Type your name here:");
+            String name = input.nextLine();
+            System.out.println("Hello" + name);
+        }
     }
 }
